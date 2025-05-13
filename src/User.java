@@ -9,4 +9,5 @@
  */
 public class User extends Person {
     //add stuff here
+    
 }

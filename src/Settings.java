@@ -12,10 +12,11 @@ public class Settings extends javax.swing.JFrame {
     /**
      * Creates new form Settings
      */
-    public static ClassSettings settings [] = new ClassSettings [3];
-    settings[0] = new Security();
-    settings[1] = new Privacy();
-    settings[2] = new Supervision();
+    public static Person ppl [] = new Person [3];
+    ppl[0] = new Security();
+    ppl[1] = new Privacy();
+    ppl[2] = new Supervision();
+    //i dont think we need to dropbox D:
     public Settings() {
         initComponents();
         for (int i = 0; i<3; i++) {

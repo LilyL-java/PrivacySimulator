@@ -9,4 +9,13 @@
  */
 public class Account {
     //add stuff here
+    private String username;
+    private String password;
+    private ClassSettings settings;
+    
+    public Account(String username, String password, ClassSettings settings) {
+        this.username = username;
+        this.password = password;
+        this.settings = settings;
+    }
 }

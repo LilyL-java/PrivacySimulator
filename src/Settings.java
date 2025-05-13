@@ -13,10 +13,12 @@ public class Settings extends javax.swing.JFrame {
      * Creates new form Settings
      */
     public static ClassSettings settings [] = new ClassSettings [3];
+    settings[0] = new Security();
+    settings[1] = new Privacy();
+    settings[2] = new Supervision();
     public Settings() {
         initComponents();
         for (int i = 0; i<3; i++) {
-            settings[i] = new ClassSettings();
             jComboBox1.addItem(settings[i]);
         }
     }

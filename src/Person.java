@@ -8,5 +8,5 @@
  * @author Lily
  */
 public class Person {
-    //add stuff here
+
 }

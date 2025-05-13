@@ -34,7 +34,6 @@ public class Person {
     }
     public Date getDOB() {
         return dob;
-        //add tostring in date class
     }
     public void setDOB(Date dob) {
         this.dob = dob;

@@ -19,4 +19,7 @@ public class Settings {
         this.isPrivate = isPrivate;
         this.hasParentalVision = hasParentalVision;
     }
+    public Settings() {
+        //pleh
+    }
 }

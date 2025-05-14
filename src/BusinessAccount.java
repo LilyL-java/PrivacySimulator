@@ -5,9 +5,8 @@
 
 /**
  *
- * @author Lily
+ * @author 342619939
  */
-public class User extends Person {
-    //add stuff here
-    
+public class BusinessAccount extends Account {
+    //stuff here
 }

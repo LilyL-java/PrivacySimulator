@@ -7,7 +7,7 @@
  *
  * @author Lily
  */
-public class RegularAccount extends Account {
+public class PersonalAccount extends Account {
     //add stuff here
     
 }

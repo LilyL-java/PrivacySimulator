@@ -12,15 +12,15 @@ public class SettingsSimulation extends javax.swing.JFrame {
     /**
      * Creates new form SettingsSimulation
      */
-    public static Person ppl [] = new Person [3];
-    ppl[0] = new SettingsSimulation();
-    ppl[1] = new SettingsSimulation);
-    ppl[2] = new SettingsSimulationion();
+    public static Account ppl [] = new Account [3];
+
     //i dont think we need to dropbox D:
     public SettingsSimulation() {
         initComponents();
+            ppl[0] = new BusinessAccount();
+            ppl[1] = new PersonalAccount();
         for (int i = 0; i<3; i++) {
-            jComboBox1.addItem(settings[i]);
+            jComboBox1.addItem(ppl[i]);
         }
     }
 
@@ -104,7 +104,7 @@ public class SettingsSimulation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<Settings> jComboBox1;
+    private javax.swing.JComboBox<Account> jComboBox1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

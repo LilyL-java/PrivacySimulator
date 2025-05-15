@@ -14,6 +14,7 @@ public class Account {
     private String username;
     private String password;
     private Settings settings;
+    private static int numAccounts = 0;
     private static final String DEFAULT_NAME = "NULL";
     
     public Account(String lastName, String firstName, String username, String password, Settings settings) {
@@ -22,6 +23,7 @@ public class Account {
         this.username = username;
         this.password = password;
         this.settings = settings;
+        numAccounts++;
     }
     public Account() {
         this.lastName = DEFAULT_NAME;
@@ -29,6 +31,7 @@ public class Account {
         this.username = "User123";
         this.password = "Pass123";
         this.settings = new Settings();
+        numAccounts++;
     }
     
     public String getName() {
@@ -46,5 +49,8 @@ public class Account {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+    public static int getNumAccounts() {
+        return numAccounts;
     }
 }

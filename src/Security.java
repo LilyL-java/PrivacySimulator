@@ -19,10 +19,13 @@ public class Security {
     }
     public Security() {
         this.privateAccount = false;
-        this.newPassword = "Null";
+        this.newPassword = "NULL";
         this.enableVerification = false;
     }
     public String getNewPassword() {
         return newPassword;
+    }
+    public void setPrivateAccount() {
+        
     }
 }

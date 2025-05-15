@@ -12,7 +12,7 @@ public class SettingsSimulation extends javax.swing.JFrame {
     /**
      * Creates new form SettingsSimulation
      */
-    public static Account ppl [] = new Account [3];
+    public static Account ppl [] = new Account [2];
 
     //i dont think we need to dropbox D:
     public SettingsSimulation() {

@@ -42,7 +42,7 @@ public class Account {
         this.firstName = firstName;
     }
     public String getUsername() {
-        return username;
+        return "Your username is " + username;
     }
     public void setUsername(String username) {
         this.username = username;
@@ -52,5 +52,8 @@ public class Account {
     }
     public static int getNumAccounts() {
         return numAccounts;
+    }
+    public String toString() {
+        return "Username: " + username;
     }
 }

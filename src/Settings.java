@@ -8,13 +8,11 @@
  * @author 342619939
  */
 public class Settings {
-    private boolean updated;
     private Security isSecure;
     private Privacy isPrivate;
     private Supervision hasParentalVision;
     
-    public Settings(boolean updated, Security isSecure, Privacy isPrivate, Supervision hasParentalVision) {
-        this.updated = updated;
+    public Settings(Security isSecure, Privacy isPrivate, Supervision hasParentalVision) {
         this.isSecure = isSecure;
         this.isPrivate = isPrivate;
         this.hasParentalVision = hasParentalVision;

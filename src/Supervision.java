@@ -20,6 +20,14 @@ public class Supervision {
     
     Supervision(){
         this.parentalControls = false;
-        this.accessPin = 1234; 
+        this.accessPin = 0000; 
+    }
+    //getting the pin
+    public int getPin(){
+        return accessPin;
+    }
+    //setting a new pin
+    public void setPin(int newPin){
+        this.accessPin = newPin; 
     }
 }

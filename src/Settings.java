@@ -18,6 +18,8 @@ public class Settings {
         this.hasParentalVision = hasParentalVision;
     }
     public Settings() {
-        //pleh
+        this.isSecure = new Security();
+        this.isPrivate = new Privacy();
+        this.hasParentalVision = new Supervision();
     }
 }

@@ -8,6 +8,21 @@
  * @author 342619939
  */
 public class Privacy {
+    //Privacy is associated with Settings
+    private boolean allowDMs; 
+    private boolean enableSafeSearch;
+    private boolean enableSearchHistory;
     
-    //asdsada
+    //Constructors
+    Privacy(boolean allowDMs, boolean enableSafeSearch, boolean enableSearchHistory){
+        this.allowDMs = allowDMs;
+        this.enableSafeSearch = enableSafeSearch;
+        this.enableSearchHistory = enableSearchHistory;
+    }
+    
+    Privacy(){
+        this.allowDMs = false;
+        this.enableSafeSearch = false;
+        this.enableSafeSearch = false;
+    }
 }

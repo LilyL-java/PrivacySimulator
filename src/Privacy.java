@@ -8,5 +8,6 @@
  * @author 342619939
  */
 public class Privacy {
+    
     //asdsada
 }

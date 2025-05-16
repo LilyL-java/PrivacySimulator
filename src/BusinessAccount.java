@@ -43,4 +43,8 @@ public class BusinessAccount extends Account {
     public int getDailyInteractions() {
         return dailyInteractions;
     }
+    @Override
+    public String toString() {
+        return "Business name: " + username;
+    }
 }

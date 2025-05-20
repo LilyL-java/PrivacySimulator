@@ -25,7 +25,12 @@ public class Security {
     public String getNewPassword() {
         return newPassword;
     }
-    public void setPrivateAccount() {
-        
+    public void setPrivateAccount(boolean choice) {
+        if (choice == true) {
+            this.privateAccount = true;
+        } else {
+            this.privateAccount = false;
+        }
     }
+    
 }

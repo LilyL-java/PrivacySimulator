@@ -12,8 +12,8 @@ public class PersonalAccount extends Account {
     private int timeOnline;
     private String username;
     
-    public PersonalAccount(String lastName, String firstName, String password, Settings settings, boolean enableDM, int timeOnline, String displayName) {
-        super(lastName, firstName, displayName, password);
+    public PersonalAccount(String lastName, String firstName, String username, String password, boolean enableDM, int timeOnline) {
+        super(lastName, firstName, username, password);
         this.enableDM = enableDM;
         this.timeOnline = timeOnline;
     }

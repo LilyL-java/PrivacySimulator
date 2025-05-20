@@ -12,8 +12,8 @@ public class BusinessAccount extends Account {
     private String username;
     private int dailyInteractions;
     
-    public BusinessAccount(String lastName, String firstName, String password, Settings settings, boolean enableAds, String businessName, int dailyInteractions) {
-        super(lastName, firstName, businessName, password);
+    public BusinessAccount(String lastName, String firstName, String username, String password, boolean enableAds, int dailyInteractions) {
+        super(lastName, firstName, username, password);
         this.enableAds = enableAds;
         this.dailyInteractions = dailyInteractions;
     }

@@ -13,7 +13,7 @@ public class PersonalAccount extends Account {
     private String username;
     
     public PersonalAccount(String lastName, String firstName, String password, Settings settings, boolean enableDM, int timeOnline, String displayName) {
-        super(lastName, firstName, displayName, password, settings);
+        super(lastName, firstName, displayName, password);
         this.enableDM = enableDM;
         this.timeOnline = timeOnline;
     }

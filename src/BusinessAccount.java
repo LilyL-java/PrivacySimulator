@@ -13,7 +13,7 @@ public class BusinessAccount extends Account {
     private int dailyInteractions;
     
     public BusinessAccount(String lastName, String firstName, String password, Settings settings, boolean enableAds, String businessName, int dailyInteractions) {
-        super(lastName, firstName, businessName, password, settings);
+        super(lastName, firstName, businessName, password);
         this.enableAds = enableAds;
         this.dailyInteractions = dailyInteractions;
     }

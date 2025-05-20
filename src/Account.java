@@ -13,16 +13,14 @@ public class Account {
     private String firstName;
     private String username;
     private String password;
-    private Settings settings;
     private static int numAccounts = 0;
     private static final String DEFAULT_NAME = "NULL";
     
-    public Account(String lastName, String firstName, String username, String password, Settings settings) {
+    public Account(String lastName, String firstName, String username, String password) {
         this.lastName= lastName;
         this.firstName = firstName;
         this.username = username;
         this.password = password;
-        this.settings = settings;
         numAccounts++;
     }
     public Account() {
@@ -30,7 +28,6 @@ public class Account {
         this.firstName = DEFAULT_NAME;
         this.username = "User123";
         this.password = "Pass123";
-        this.settings = new Settings();
         numAccounts++;
     }
     

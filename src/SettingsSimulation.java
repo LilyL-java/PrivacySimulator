@@ -7,7 +7,7 @@
  *
  * @author 342619939
  */
-public class SettingsSimulation extends javax.swing.JFrame {
+public class SettingsSimulation extends javax.swing.JFrame{
 
     /**
      * Creates new form SettingsSimulation
@@ -16,7 +16,7 @@ public class SettingsSimulation extends javax.swing.JFrame {
     //i dont think we need to dropbox D:
     public SettingsSimulation() {
         initComponents();
-        }
+
     }
 
     /**

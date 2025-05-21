@@ -8,7 +8,7 @@
  * @author 343418067
  */
 public class AccountCreation extends javax.swing.JFrame {
-
+public static Account account;
     /**
      * Creates new form AccountCreation
      */
@@ -180,13 +180,13 @@ public class AccountCreation extends javax.swing.JFrame {
         //Creating new account objects from Account class with information
         //Pick.personal is the personal variable that tells the program if a personal account is being created or if a business account is being created.
         if(Pick.personal == true && jCheckBox1.isSelected()){ 
-            Account account = new PersonalAccount(lname, name, user, pass, true, 0); 
+            account = new PersonalAccount(lname, name, user, pass, true, 0); 
         }else if(Pick.personal == true){
-            Account account = new PersonalAccount(lname, name, user, pass, false, 0); 
+            account = new PersonalAccount(lname, name, user, pass, false, 0); 
         }else if (Pick.personal == false && jCheckBox2.isSelected()){
-            Account account = new BusinessAccount(lname, name, user, pass, true, 0); 
+            account = new BusinessAccount(lname, name, user, pass, true, 0); 
         }else if (Pick.personal == false){
-            Account account = new BusinessAccount(lname, name, user, pass, false, 0);
+            account = new BusinessAccount(lname, name, user, pass, false, 0);
         }
         
         //Changes this display page to the next page

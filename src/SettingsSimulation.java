@@ -216,10 +216,11 @@ public class SettingsSimulation extends javax.swing.JFrame{
         
         //check if text field value matches old password
         //if it does, then password will change 
-        if(checkpass == account.getPassword()){
-            account.setPassword(jTextField1.getText());
+        if(checkpass == AccountCreation.account.getPassword()){
+            AccountCreation.account.setPassword(jTextField1.getText());
         }else{
             System.out.println("Password Change failed.");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

@@ -220,6 +220,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
             account.setPassword(jTextField1.getText());
         }else{
             System.out.println("Password Change failed.");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

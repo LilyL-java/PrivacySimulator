@@ -43,6 +43,12 @@ public class BusinessAccount extends Account {
     public int getDailyInteractions() {
         return dailyInteractions;
     }
+    public void setPassword(String newPass) {
+        super.setPassword(newPass);
+    }
+    public String getPassword() {
+        return super.getPassword();
+    }
     @Override
     public String toString() {
         return "Business name: " + username;

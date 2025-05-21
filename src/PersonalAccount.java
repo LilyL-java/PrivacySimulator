@@ -39,4 +39,10 @@ public class PersonalAccount extends Account {
     public void setUsername(String name) {
         this.username = name;
     }
+    public void setPassword(String newPass) {
+        super.setPassword(newPass);
+    }
+    public String getPassword() {
+        return super.getPassword();
+    }
 }

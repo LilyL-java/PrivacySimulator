@@ -35,6 +35,7 @@ public class PersonalAccount extends Account {
     public String getUsername() {
         return "Your display name is " + username;
     }
+    
     public void setUsername(String name) {
         this.username = name;
     }

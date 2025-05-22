@@ -34,16 +34,16 @@ public class SettingsSimulation extends javax.swing.JFrame{
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        makePrivate = new javax.swing.JCheckBox();
+        enableTwoStep = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
+        allowDMs = new javax.swing.JCheckBox();
+        enableSafeSearch = new javax.swing.JCheckBox();
+        enableSearchHistory = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        enableParentalControls = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
@@ -53,12 +53,21 @@ public class SettingsSimulation extends javax.swing.JFrame{
         jTextField3 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
+        allowDMsTB = new javax.swing.JLabel();
+        enableTwoStepTB = new javax.swing.JLabel();
+        makePrivateTB = new javax.swing.JLabel();
+        enableSafeSearchTB = new javax.swing.JLabel();
+        enableSearchHistoryTB1 = new javax.swing.JLabel();
+        enableParentalControlsTB = new javax.swing.JLabel();
+        setPinTB = new javax.swing.JLabel();
+        passwordStatus = new javax.swing.JLabel();
 
         jButton5.setText("jButton5");
 
         jLabel9.setText("*to change pin (4 digit number), edit in text box first");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Settings Simulation Page");
@@ -72,31 +81,46 @@ public class SettingsSimulation extends javax.swing.JFrame{
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Supervision");
 
-        jCheckBox1.setText("Make account private");
+        makePrivate.setText("Make account private");
 
-        jCheckBox2.setText("Enable two-step verification");
+        enableTwoStep.setText("Enable two-step verification");
 
         jLabel5.setText("New Password: ");
 
         jLabel6.setText("__________________________________________________________________________________________");
 
-        jCheckBox3.setText("Allow DMs");
+        allowDMs.setText("Allow DMs");
 
-        jCheckBox4.setText("Enable safe search");
+        enableSafeSearch.setText("Enable safe search");
+        enableSafeSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enableSafeSearchActionPerformed(evt);
+            }
+        });
 
-        jCheckBox5.setText("Enable search history");
+        enableSearchHistory.setText("Enable search history");
 
         jLabel7.setText("_________________________________________________________________________________________");
 
-        jCheckBox6.setText("Enable parental controls");
+        enableParentalControls.setText("Enable parental controls");
 
         jLabel8.setText("Access pin (4 digit number)*: ");
 
         jButton2.setText("Set Pin");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("________________________________________________________________________________________");
 
         jButton3.setText("Complete");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel11.setText("Old Password: ");
 
@@ -109,65 +133,111 @@ public class SettingsSimulation extends javax.swing.JFrame{
 
         jLabel12.setText("__________________________________________________________________________________________");
 
+        allowDMsTB.setText("<---------");
+
+        enableTwoStepTB.setText("<---------");
+
+        makePrivateTB.setText("<---------");
+
+        enableSafeSearchTB.setText("<---------");
+
+        enableSearchHistoryTB1.setText("<---------");
+
+        enableParentalControlsTB.setText("<---------");
+
+        setPinTB.setText("<---------");
+
+        passwordStatus.setText("Password status: Unchanged");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(141, 141, 141))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton3)
-                                .addComponent(jLabel10)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel8)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jCheckBox6)
-                                .addComponent(jLabel2)
-                                .addComponent(jCheckBox1)
-                                .addComponent(jCheckBox2)
-                                .addComponent(jLabel3)
-                                .addComponent(jCheckBox3)
-                                .addComponent(jCheckBox4)
-                                .addComponent(jCheckBox5)
-                                .addComponent(jLabel4)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(makePrivate)
+                        .addGap(41, 41, 41)
+                        .addComponent(makePrivateTB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(105, 105, 105))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(allowDMs)
+                                .addGap(18, 18, 18)
+                                .addComponent(allowDMsTB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(enableSearchHistory)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(enableSearchHistoryTB1, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(enableSafeSearch)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(enableSafeSearchTB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(enableParentalControls)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(enableParentalControlsTB, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton2)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(jLabel11)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField3))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel5)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jButton6))
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(19, 19, 19)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(setPinTB, javax.swing.GroupLayout.DEFAULT_SIZE, 971, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton3)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(enableTwoStep)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(enableTwoStepTB, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(31, 31, 31))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(11, 11, 11)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextField3)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                        .addGap(35, 35, 35)
+                        .addComponent(jButton6)
+                        .addGap(39, 39, 39)
+                        .addComponent(passwordStatus)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12)
                 .addGap(9, 9, 9)
                 .addComponent(jLabel2)
                 .addGap(9, 9, 9)
-                .addComponent(jCheckBox1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(makePrivate)
+                    .addComponent(makePrivateTB))
                 .addGap(8, 8, 8)
-                .addComponent(jCheckBox2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enableTwoStep)
+                    .addComponent(enableTwoStepTB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,34 +246,45 @@ public class SettingsSimulation extends javax.swing.JFrame{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6))
+                    .addComponent(jButton6)
+                    .addComponent(passwordStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(allowDMs)
+                    .addComponent(allowDMsTB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enableSafeSearch)
+                    .addComponent(enableSafeSearchTB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enableSearchHistory)
+                    .addComponent(enableSearchHistoryTB1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enableParentalControls)
+                    .addComponent(enableParentalControlsTB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(setPinTB))
                 .addGap(12, 12, 12)
                 .addComponent(jLabel10)
                 .addGap(24, 24, 24)
                 .addComponent(jButton3)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
@@ -216,12 +297,47 @@ public class SettingsSimulation extends javax.swing.JFrame{
         
         //check if text field value matches old password
         //if it does, then password will change 
-        if(checkpass == AccountCreation.account.getPassword()){
+        if(checkpass.equals(AccountCreation.account.getPassword())){
             AccountCreation.account.setPassword(jTextField1.getText());
+            passwordStatus.setText("Password status: Password change sucessful!");
         }else{
-            System.out.println("Password Change failed.");
+            passwordStatus.setText("Password status: Password change failed. Incorrect password.");
         }
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // This is the complete button, it'll start giving you descriptions of what the buttons do in your settings page
+        
+        if(makePrivate.isSelected())
+            makePrivateTB.setText("<--------- When make account private is selected, it prevents people from viewing your account unless you're mutual friends.");
+        
+        if(enableTwoStep.isSelected())
+            enableTwoStepTB.setText("<--------- When you enable two step verifications, anyone trying to log onto your account will need to enter an additional code sent to your email.");
+        
+        if(allowDMs.isSelected())
+            allowDMsTB.setText("<--------- This allows direct messages from complete strangers.");
+        
+        if(enableSafeSearch.isSelected())
+            enableSafeSearchTB.setText("<--------- Safe search prevents your feed from recieving inappropriate or violent content.");
+        
+        if(enableSearchHistory.isSelected())
+            enableSearchHistoryTB1.setText("<--------- Enabling search history saves your recent search queues, and tells the algorithm to match your content to your feed.");
+        
+        if(enableParentalControls.isSelected())
+            enableParentalControlsTB.setText("<--------- Allow your parents to control your access to this app.");
+        
+        setPinTB.setText("<--------- This a pin parents can set for their child that is required every time to open the app.");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void enableSafeSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableSafeSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enableSafeSearchActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // This is the set pin button
+        String pin =  jTextField2.getText();
+        jTextField2.setText("Complete!");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,16 +376,20 @@ public class SettingsSimulation extends javax.swing.JFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox allowDMs;
+    private javax.swing.JLabel allowDMsTB;
+    private javax.swing.JCheckBox enableParentalControls;
+    private javax.swing.JLabel enableParentalControlsTB;
+    private javax.swing.JCheckBox enableSafeSearch;
+    private javax.swing.JLabel enableSafeSearchTB;
+    private javax.swing.JCheckBox enableSearchHistory;
+    private javax.swing.JLabel enableSearchHistoryTB1;
+    private javax.swing.JCheckBox enableTwoStep;
+    private javax.swing.JLabel enableTwoStepTB;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -285,5 +405,9 @@ public class SettingsSimulation extends javax.swing.JFrame{
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JCheckBox makePrivate;
+    private javax.swing.JLabel makePrivateTB;
+    private javax.swing.JLabel passwordStatus;
+    private javax.swing.JLabel setPinTB;
     // End of variables declaration//GEN-END:variables
 }

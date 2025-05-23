@@ -1,3 +1,3 @@
-sigma
-sigma
-sigma
+Loo,Wayne,Looser1234,password1234,true,123
+Guan,Coco,Coconut3456,1234password,false,123
+Liang,Lily,helpthisispainful,pass1234word,false,123

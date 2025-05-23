@@ -61,6 +61,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
         enableParentalControlsTB = new javax.swing.JLabel();
         setPinTB = new javax.swing.JLabel();
         passwordStatus = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jButton5.setText("jButton5");
 
@@ -115,7 +116,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
 
         jLabel10.setText("________________________________________________________________________________________");
 
-        jButton3.setText("Complete");
+        jButton3.setText("View Results");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -149,6 +150,13 @@ public class SettingsSimulation extends javax.swing.JFrame{
 
         passwordStatus.setText("Password status: Unchanged");
 
+        jButton1.setText("Next");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -170,7 +178,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(enableSearchHistory)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(enableSearchHistoryTB1, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE))
+                                .addComponent(enableSearchHistoryTB1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(enableSafeSearch)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -178,15 +186,14 @@ public class SettingsSimulation extends javax.swing.JFrame{
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(enableParentalControls)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(enableParentalControlsTB, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE))
+                                .addComponent(enableParentalControlsTB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton2)
                                 .addGap(18, 18, 18)
-                                .addComponent(setPinTB, javax.swing.GroupLayout.DEFAULT_SIZE, 971, Short.MAX_VALUE))
+                                .addComponent(setPinTB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton3)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -202,7 +209,12 @@ public class SettingsSimulation extends javax.swing.JFrame{
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1)
+                                .addGap(27, 27, 27)))
                         .addGap(31, 31, 31))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,7 +295,9 @@ public class SettingsSimulation extends javax.swing.JFrame{
                 .addGap(12, 12, 12)
                 .addComponent(jLabel10)
                 .addGap(24, 24, 24)
-                .addComponent(jButton3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
@@ -308,23 +322,38 @@ public class SettingsSimulation extends javax.swing.JFrame{
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // This is the complete button, it'll start giving you descriptions of what the buttons do in your settings page
         
-        if(makePrivate.isSelected())
-            makePrivateTB.setText("<--------- When make account private is selected, it prevents people from viewing your account unless you're mutual friends.");
+        if(makePrivate.isSelected()){
+            makePrivateTB.setText("<--------- When make account private is selected, it prevents people from viewing your account unless you're mutual friends.");}
+        else{
+            makePrivateTB.setText("<--------- Make account private not selected allows strangers to view your account without being mutual friends.");}
         
-        if(enableTwoStep.isSelected())
-            enableTwoStepTB.setText("<--------- When you enable two step verifications, anyone trying to log onto your account will need to enter an additional code sent to your email.");
+        if(enableTwoStep.isSelected()){
+            enableTwoStepTB.setText("<--------- When you enable two step verifications, anyone trying to log onto your account will need to enter an additional code sent to your email.");}
+        else{
+            enableTwoStepTB.setText("<--------- When you disable two step verification, anyone with access to your password can log in.");}
+            
+        if(allowDMs.isSelected()){
+            allowDMsTB.setText("<--------- This allows direct messages from complete strangers.");}
+        else{
+            allowDMsTB.setText("<--------- This disables direct messages from complete strangers.");}
         
-        if(allowDMs.isSelected())
-            allowDMsTB.setText("<--------- This allows direct messages from complete strangers.");
+        if(enableSafeSearch.isSelected()){
+            enableSafeSearchTB.setText("<--------- Selecting safe search prevents your feed from recieving inappropriate or violent content.");}
+        else {
+            enableSafeSearchTB.setText("<--------- Not selecting Safe search allows you to recieve inappropriate or violent content.");}
         
-        if(enableSafeSearch.isSelected())
-            enableSafeSearchTB.setText("<--------- Safe search prevents your feed from recieving inappropriate or violent content.");
+        if(enableSearchHistory.isSelected()){
+            enableSearchHistoryTB1.setText("<--------- Enabling search history saves your recent search queues, and tells the algorithm to match your content to your feed.");}
+        else{
+            enableSearchHistoryTB1.setText("<--------- Disabling search history does not allow algorithm to match your preferences to your feed (but is safer).");
+        }
         
-        if(enableSearchHistory.isSelected())
-            enableSearchHistoryTB1.setText("<--------- Enabling search history saves your recent search queues, and tells the algorithm to match your content to your feed.");
+        if(enableParentalControls.isSelected()){
+            enableParentalControlsTB.setText("<--------- Allow your parents to control your access to this app.");}
+        else{
+            enableParentalControlsTB.setText("<--------- Does not allow your parents to control your access to this app.");
+        }
         
-        if(enableParentalControls.isSelected())
-            enableParentalControlsTB.setText("<--------- Allow your parents to control your access to this app.");
         
         setPinTB.setText("<--------- This a pin parents can set for their child that is required every time to open the app.");
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -338,6 +367,10 @@ public class SettingsSimulation extends javax.swing.JFrame{
         String pin =  jTextField2.getText();
         jTextField2.setText("Complete!");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // This is the next button. It will take you to a different page depending on if you've created a personal account earlier or a business account. 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -386,6 +419,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
     private javax.swing.JLabel enableSearchHistoryTB1;
     private javax.swing.JCheckBox enableTwoStep;
     private javax.swing.JLabel enableTwoStepTB;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;

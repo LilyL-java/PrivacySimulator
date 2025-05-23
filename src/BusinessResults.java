@@ -28,6 +28,8 @@ public class BusinessResults extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,6 +39,10 @@ public class BusinessResults extends javax.swing.JFrame {
         jLabel2.setText("- Business accounts on websites and social media are usually created for more exposure to your business.");
 
         jLabel3.setText("- This way, you can make your company more known online and grow a digital following. ");
+
+        jLabel4.setText("Usenname of account:");
+
+        jLabel5.setText("Password of account:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,7 +57,9 @@ public class BusinessResults extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3))))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -63,7 +71,11 @@ public class BusinessResults extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel5)
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,5 +120,7 @@ public class BusinessResults extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

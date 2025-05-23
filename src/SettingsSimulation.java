@@ -371,10 +371,10 @@ public class SettingsSimulation extends javax.swing.JFrame{
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // This is the next button. It will take you to a different page depending on if you've created a personal account earlier or a business account. 
         
-        if(Pick.personal == true){
+        if(Pick.personal.equals("a")){
             new PersonResults().setVisible(true);
             
-        }else{
+        }else if(Pick.personal.equals("b")){
             new BusinessResults().setVisible(true);
         }
         

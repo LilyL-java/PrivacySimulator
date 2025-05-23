@@ -8,7 +8,7 @@
  * @author 342619939
  */
 public class Pick extends javax.swing.JFrame {
-public static boolean personal; 
+public static String personal = "c"; 
     /**
      * Creates new form Pick
      */
@@ -108,7 +108,7 @@ public static boolean personal;
         this.setVisible(false);
         //when this button gets pressed, personal boolean = true
         
-        personal = true; 
+        personal = "a"; 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -116,7 +116,7 @@ public static boolean personal;
         new AccountCreation().setVisible(true);
         this.setVisible(false);
         
-        personal = false;
+        personal = "b";
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

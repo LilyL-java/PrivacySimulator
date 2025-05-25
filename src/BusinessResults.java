@@ -4,6 +4,7 @@
  */
 import java.io.File;
 import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.Scanner;
 /**
@@ -127,11 +128,12 @@ public class BusinessResults extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //Initializing variables
         int personalCount = 0;
         int businessCount = 0;
         int count = 0;
         int i = 0;
-        
+        //Try catch below to count the lines in info.txt
         try {
             Scanner in = new Scanner(new File("info.txt"));
             while (in.hasNext()) {
@@ -141,13 +143,16 @@ public class BusinessResults extends javax.swing.JFrame {
         } catch(IOException e) {
             System.out.println("Cannot connect to file");
         }
+        //Below sets the array of accounts based on the number of lines in the txt file
         Account accounts [] = new Account [count];
-        
+        //Below is another try catch that goes through each line and splits the data from delimiter ","
+        //Each piece of data is used to make a Business or Personal account based on the word "Business" or "Personal" at the end
         try {
             Scanner in = new Scanner(new File("info.txt"));
             while (in.hasNext()) {
                 String output = in.nextLine();
                 String data [] = output.split(",");
+                //Prints out name, username, and type of account
                 System.out.print(data[2] + " Name: " + data[1] + " " + data[0] + " Type: " + data[9]);
                 if (data[9].equals("Business")) {
                     accounts[i] = new BusinessAccount(data[0],data[1],new Date(Integer.parseInt(data[3]),Integer.parseInt(data[4]),Integer.parseInt(data[5])),data[2],data[6],Boolean.parseBoolean(data[7]),Integer.parseInt(data[8]));
@@ -159,6 +164,7 @@ public class BusinessResults extends javax.swing.JFrame {
                     System.out.println("");
                 }
             }
+            //For every element in accounts array, if it's a business or personal account, it adds 1 to it's respective counter
             for (int e = 0; e < accounts.length; e++) {
                 if (accounts[e] instanceof BusinessAccount) {
                     businessCount++;
@@ -166,10 +172,11 @@ public class BusinessResults extends javax.swing.JFrame {
                     personalCount++;
                 }
             }
-            
+            //Uses the counters to say how many of which type of account is stored
             System.out.println("Business Accounts Stored: " + businessCount);
             System.out.println("Personal Accounts Stored: " + personalCount);
-        } catch (IOException e) {
+        } catch (FileNotFoundException e) {
+            //If file is not found, prints error message
             System.out.println("Cannot connect to file");
         }
        

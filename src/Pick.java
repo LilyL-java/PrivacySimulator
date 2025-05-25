@@ -8,6 +8,7 @@
  * @author 342619939
  */
 public class Pick extends javax.swing.JFrame {
+//Below sets personal as c (preset)
 public static String personal = "c"; 
     /**
      * Creates new form Pick
@@ -107,7 +108,7 @@ public static String personal = "c";
         new AccountCreation().setVisible(true);
         this.setVisible(false);
         //when this button gets pressed, personal boolean = true
-        
+        //Sets personal as "a" (info transfered to next jframe)
         personal = "a"; 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -115,7 +116,7 @@ public static String personal = "c";
         // This is the create business account button 
         new AccountCreation().setVisible(true);
         this.setVisible(false);
-        
+        //Sets personal as "b" (info transfered to next jframe)
         personal = "b";
     }//GEN-LAST:event_jButton2ActionPerformed
 

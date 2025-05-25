@@ -321,7 +321,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // This is the complete button, it'll start giving you descriptions of what the buttons do in your settings page
-        
+        //Many if statements and their respective message whether user selected specific check boxes
         if(makePrivate.isSelected()){
             makePrivateTB.setText("<--------- When make account private is selected, it prevents people from viewing your account unless you're mutual friends.");}
         else{
@@ -354,7 +354,6 @@ public class SettingsSimulation extends javax.swing.JFrame{
             enableParentalControlsTB.setText("<--------- Does not allow your parents to control your access to this app.");
         }
         
-        
         setPinTB.setText("<--------- This a pin parents can set for their child that is required every time to open the app.");
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -370,7 +369,7 @@ public class SettingsSimulation extends javax.swing.JFrame{
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // This is the next button. It will take you to a different page depending on if you've created a personal account earlier or a business account. 
-        
+        //Variable personal is used here to make certain jframes appear based on "a" or "b"
         if(Pick.personal.equals("a")){
             new PersonResults().setVisible(true);
             

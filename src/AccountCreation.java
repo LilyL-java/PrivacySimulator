@@ -287,6 +287,7 @@ public static Account account;
         
         //Creating new account objects from Account class with information
         //Pick.personal is the personal variable that tells the program if a personal account is being created or if a business account is being created.
+        //Making the account uses the string variables above
         if(Pick.personal.equals("a") && jCheckBox1.isSelected()){ 
             account = new PersonalAccount(lname, name, new Date(day, month, year), user, pass, true, number); 
         }else if(Pick.personal.equals("a")){

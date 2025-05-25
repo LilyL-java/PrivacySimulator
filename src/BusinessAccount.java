@@ -9,11 +9,10 @@
  */
 public class BusinessAccount extends Account {
     private boolean enableAds;
-    private String username;
     private int dailyInteractions;
     
-    public BusinessAccount(String lastName, String firstName, String username, String password, boolean enableAds, int dailyInteractions) {
-        super(lastName, firstName, username, password);
+    public BusinessAccount(String lastName, String firstName, Date date, String username, String password, boolean enableAds, int dailyInteractions) {
+        super(lastName, firstName, date, username, password);
         this.enableAds = enableAds;
         this.dailyInteractions = dailyInteractions;
     }
@@ -30,12 +29,12 @@ public class BusinessAccount extends Account {
             this.enableAds = true;
         }
     }
-    public void setUsername(String businessName) {
-        this.username = businessName;
+    public void setUsername(String username) {
+        super.setUsername(username);
     }
     @Override
     public String getUsername() {
-        return "Your business' name is " + username;
+        return "Business' name is " + super.getUsername();
     }
     public void setDailyInteractions(int number) {
         this.dailyInteractions = number;
@@ -49,8 +48,7 @@ public class BusinessAccount extends Account {
     public String getPassword() {
         return super.getPassword();
     }
-    @Override
-    public String toString() {
-        return "Business name: " + username;
+    public boolean getChoice() {
+        return enableAds;
     }
 }

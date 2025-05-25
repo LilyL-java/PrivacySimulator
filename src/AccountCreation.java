@@ -42,6 +42,16 @@ public static Account account;
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        dayText = new javax.swing.JTextField();
+        monthText = new javax.swing.JTextField();
+        yearText = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        numberOfUh = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
 
         jLabel6.setText("You've selected a . .");
 
@@ -70,6 +80,12 @@ public static Account account;
 
         jLabel3.setText("Username");
 
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
+
         jLabel4.setText("Password");
 
         password.addActionListener(new java.awt.event.ActionListener() {
@@ -94,83 +110,155 @@ public static Account account;
             }
         });
 
-        jLabel9.setText("Your first and last name will not be displayed!");
+        jLabel9.setText("Your first name, last name, and date of birth will not be displayed!");
+
+        jLabel10.setText("Date of birth");
+
+        jLabel11.setText("Month");
+
+        jLabel12.setText("Day");
+
+        jLabel13.setText("Year");
+
+        dayText.setText("00");
+        dayText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dayTextActionPerformed(evt);
+            }
+        });
+
+        monthText.setText("00");
+
+        yearText.setText("0000");
+
+        jLabel14.setText("Time Online/Daily Interactions");
+
+        numberOfUh.setText("0");
+        numberOfUh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberOfUhActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("*Put in seconds/Put in number of interactions to ads");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(finish)
-                .addGap(39, 39, 39))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
             .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
+                        .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel10)
+                                .addGap(133, 133, 133))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(46, 46, 46)
-                                        .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(45, 45, 45)
-                                        .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(216, 216, 216)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox2)
-                                    .addComponent(jCheckBox1)))))
+                                        .addGap(213, 213, 213)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel11)
+                                            .addComponent(jLabel12)
+                                            .addComponent(jLabel13)))
+                                    .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(dayText)
+                                    .addComponent(monthText)
+                                    .addComponent(yearText, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox2)
+                            .addComponent(jCheckBox1))
+                        .addGap(11, 11, 11))
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
+                        .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4))
-                        .addGap(46, 46, 46)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(88, 88, 88)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(numberOfUh, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(finish))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addGap(76, 76, 76)))
+                        .addGap(23, 23, 23)))
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jCheckBox1)
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBox2)))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox2)
+                        .addGap(52, 52, 52))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(dayText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(3, 3, 3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11)
+                            .addComponent(monthText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(yearText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)))
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(finish)
-                .addGap(23, 23, 23))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(finish))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(numberOfUh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -191,18 +279,22 @@ public static Account account;
         String name =  firstName.getText();
         String lname =  lastName.getText();
         String user =  username.getText();
-        String pass = password.getText(); 
+        String pass = password.getText();
+        int day = Integer.parseInt(dayText.getText());
+        int month = Integer.parseInt(monthText.getText());
+        int year = Integer.parseInt(yearText.getText());
+        int number = Integer.parseInt(numberOfUh.getText());
         
         //Creating new account objects from Account class with information
         //Pick.personal is the personal variable that tells the program if a personal account is being created or if a business account is being created.
         if(Pick.personal.equals("a") && jCheckBox1.isSelected()){ 
-            account = new PersonalAccount(lname, name, user, pass, true, 0); 
+            account = new PersonalAccount(lname, name, new Date(day, month, year), user, pass, true, number); 
         }else if(Pick.personal.equals("a")){
-            account = new PersonalAccount(lname, name, user, pass, false, 0); 
+            account = new PersonalAccount(lname, name, new Date(day, month, year), user, pass, false, number); 
         }else if (Pick.personal.equals("b") && jCheckBox2.isSelected()){
-            account = new BusinessAccount(lname, name, user, pass, true, 0); 
+            account = new BusinessAccount(lname, name, new Date(day, month, year), user, pass, true, number); 
         }else if (Pick.personal.equals("b")){
-            account = new BusinessAccount(lname, name, user, pass, false, 0);
+            account = new BusinessAccount(lname, name, new Date(day, month, year), user, pass, false, number);
         }
         
         //Changes this display page to the next page
@@ -218,6 +310,18 @@ public static Account account;
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
+
+    private void numberOfUhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfUhActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberOfUhActionPerformed
+
+    private void dayTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dayTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dayTextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,11 +359,18 @@ public static Account account;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField dayText;
     private javax.swing.JButton finish;
     private javax.swing.JTextField firstName;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -270,7 +381,10 @@ public static Account account;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTextField lastName;
+    private javax.swing.JTextField monthText;
+    private javax.swing.JTextField numberOfUh;
     private javax.swing.JTextField password;
     private javax.swing.JTextField username;
+    private javax.swing.JTextField yearText;
     // End of variables declaration//GEN-END:variables
 }

@@ -41,7 +41,7 @@ public class Date {
     public int getYear() {
         return year;
     }
-    public String getDOB() {
+    public String toString() {
         return day + "/" + month + "/" + year;
     }
 }

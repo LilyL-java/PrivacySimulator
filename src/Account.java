@@ -13,14 +13,16 @@ public class Account {
     private String firstName;
     private String username;
     private String password;
+    private Date date;
     private static int numAccounts = 0;
     private static final String DEFAULT_NAME = "NULL";
     
-    public Account(String lastName, String firstName, String username, String password) {
+    public Account(String lastName, String firstName, Date date, String username, String password) {
         this.lastName= lastName;
         this.firstName = firstName;
         this.username = username;
         this.password = password;
+        this.date = date;
         numAccounts++;
     }
     public Account() {
@@ -28,18 +30,22 @@ public class Account {
         this.firstName = DEFAULT_NAME;
         this.username = "User123";
         this.password = "Pass123";
+        this.date = new Date();
         numAccounts++;
     }
     
-    public String getName() {
-        return firstName + " " + lastName;
+    public String getFirstName() {
+        return firstName;
+    }
+    public String getLastName() {
+        return lastName;
     }
     public void setName(String lastName, String firstName) {
         this.lastName = lastName;
         this.firstName = firstName;
     }
     public String getUsername() {
-        return "Your username is " + username;
+        return username;
     }
     public void setUsername(String username) {
         this.username = username;
@@ -55,5 +61,8 @@ public class Account {
     }
     public String toString() {
         return "Username: " + username;
+    }
+    public Date getDOB() {
+        return date;
     }
 }
